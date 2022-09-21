@@ -1,0 +1,318 @@
+:root {
+    --smallest-text: 1rem;
+    --small-text: 2rem;
+    --medium-text: 2.5rem;
+    --large-text: 3rem;
+    --larger-text:5rem;
+    --extralarge-text: 6rem;
+
+    --side-margin: 15%;
+    --content-margin: 20%;
+
+    --principal-bgcl: #4b0082;
+    --secondary-color: #fcaf3b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: var(--small-text);
+}
+
+a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+    display: inherit;
+}
+
+/* ---------------------------------------------------------------------- */
+
+#Logo-menu {
+    
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+
+    color: white;
+
+}
+
+.Menu {
+    padding: 1.5rem;
+    display: flex;
+
+    margin-left: var(--side-margin);
+    margin-right: var(--side-margin);
+
+    font-size: var(--small-text);
+
+}
+
+.logo-icon {
+    width: 5rem;
+    padding-right: 1.5rem;
+}
+
+.Menu>ul {
+    /* background-color: blue; */
+
+    align-self: center;
+    text-align: end;
+
+    width: 100%;
+
+}
+
+.Menu>ul>li {
+    text-decoration: none;
+
+    margin-right: 2rem;
+    display: inline-block;
+
+    color: white;
+}
+
+.Button {
+    padding: 1.5rem 3rem 1.5rem 3rem;
+
+    background-color: #fcaf3b;
+    font-weight: 700;
+
+    display: inline-block;
+}
+
+.menu-top-bg {
+    background-color: var(--principal-bgcl);
+}
+
+/* ----------------- */
+
+#presentation {
+
+    padding-left: var(--content-margin);
+    padding-right: var(--content-margin);
+    padding-top: 15rem;
+    padding-bottom: 35rem;
+
+    text-align: center;
+
+    background-image: url(https://cdni.iconscout.com/illustration/premium/thumb/mountains-at-night-3864545-3318134.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    color: white;
+
+}
+
+#presentation>p,
+h1,
+span {
+    margin-top: 5rem;
+}
+
+#presentation>h1 {
+    font-size: var(--extralarge-text);
+    font-weight: 700;
+}
+
+#presentation>p {
+    font-size: var(--medium-text);
+    font-weight: 500;
+}
+
+#presentation span:first-of-type {
+    margin-right: 1rem;
+  }
+
+.secondb {
+    background-color: black;
+    color: white;
+}
+
+/* Main sections */
+
+.bl-presentation {
+    margin-right: var(--content-margin);
+    margin-left: var(--content-margin);
+    margin-top: var(--large-text);
+    margin-bottom: var(--large-text);
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: var(--larger-text);
+}
+
+.bl-p-unit{
+    max-width: 35rem;
+    text-align: center;
+    margin-top: var(--larger-text);
+}
+
+.bl-p-unit > img {
+    width: 10rem;
+}
+
+.bl-p-unit > h1 {
+    font-size: var(--larger-text);
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.bl-p-unit > p {
+    font-size: var(--medium-text);
+}
+
+/* - */
+
+.browsing {
+    padding-right: var(--content-margin);
+    padding-left: var(--content-margin);
+
+    padding-top: var(--extralarge-text);
+    padding-bottom: var(--extralarge-text);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.1);
+
+    color: black;
+}
+
+.browsing img {
+    /* padding-right: var(--large-text); */
+    width: 60%;
+}
+
+.browsing > .bl-p-unit {
+    text-align: left;
+}
+
+.browsing > * {
+    margin: 1rem;
+}
+
+.Menu a > img {
+    width: 5rem;
+    display: none;
+}
+
+
+/* MEdia Q */
+
+@media only screen and (max-width: 1500px) {
+    :root {
+
+        --side-margin: 10%;
+        --content-margin: 10%;
+
+    }
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+    :root {
+
+        --side-margin: 2%;
+        --content-margin: 10%;
+
+    }
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+    :root {
+    --smallest-text: 1rem;
+    --small-text: 2rem;
+    --medium-text: 2.5rem;
+    --large-text: 3rem;
+    --larger-text:5rem;
+    --extralarge-text: 6rem;
+    }
+
+    .Menu li, ul {
+      display: none;
+    }
+
+    #presentation>h1 {
+      font-size: var(--larger-text);
+  }
+
+  .bl-presentation  {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    margin:0;
+
+    justify-content: center;
+  }
+
+  .bl-p-unit > h1 {
+    font-size: var(--large-text);
+}
+.bl-p-unit > p {
+  font-size: var(--small-text);
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.bl-p-unit  span,h1,p {
+text-align: center;
+}
+.bl-p-unit span{
+display: block;
+}
+
+.browsing  {
+  flex-wrap: wrap;
+}
+.browsing img {
+  width: 35rem;
+}
+
+.Menu {
+  justify-content: space-between;
+}
+
+.Menu a > img {
+  display: inline-block;
+  filter: invert(100%) sepia(29%) saturate(4354%) hue-rotate(180deg) brightness(104%) contrast(95%);
+}
+  }
+
+
+  @media only screen and (max-width: 375px) {
+
+  .browsing img {
+    width: 25rem;
+  }
+
+  #presentation > .Button {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  
+}
+
+@media only screen and (max-width: 350px) {
+    #presentation span:first-of-type {
+        margin-right: 0rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        margin-top: 0;
+      }
+      #presentation .Button {
+        margin-right: 0rem;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        margin-top: 2rem;
+      }
+}

@@ -53,6 +53,7 @@ a {
     margin-right: var(--side-margin);
 
     font-size: var(--small-text);
+    font-weight: bold;
 
 }
 
@@ -80,22 +81,22 @@ a {
     color: white;
 }
 
-.Button {
+.Btn {
     padding: 1.5rem 3rem 1.5rem 3rem;
 
     background-color: #fcaf3b;
-    font-weight: 700;
+    font-weight: bold;
 
     display: inline-block;
 }
 
-.menu-top-bg {
+.Menu-top {
     background-color: var(--principal-bgcl);
 }
 
 /* ----------------- */
 
-#presentation {
+#header__content {
 
     padding-left: var(--content-margin);
     padding-right: var(--content-margin);
@@ -104,7 +105,7 @@ a {
 
     text-align: center;
 
-    background-image: url(https://cdni.iconscout.com/illustration/premium/thumb/mountains-at-night-3864545-3318134.png);
+    background-image: url(Images/BgPurpleMountains.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -113,34 +114,34 @@ a {
 
 }
 
-#presentation>p,
+#header__content>p,
 h1,
 span {
     margin-top: 5rem;
 }
 
-#presentation>h1 {
+#header__content > h1 {
     font-size: var(--extralarge-text);
     font-weight: 700;
 }
 
-#presentation>p {
+#header__content > p {
     font-size: var(--medium-text);
     font-weight: 500;
 }
 
-#presentation span:first-of-type {
+#header__content span:first-of-type {
     margin-right: 1rem;
   }
 
-.secondb {
+.Btn--SecColor {
     background-color: black;
     color: white;
 }
 
 /* Main sections */
 
-.bl-presentation {
+.cards {
     margin-right: var(--content-margin);
     margin-left: var(--content-margin);
     margin-top: var(--large-text);
@@ -152,23 +153,23 @@ span {
     padding-bottom: var(--larger-text);
 }
 
-.bl-p-unit{
+.cards__item{
     max-width: 35rem;
     text-align: center;
     margin-top: var(--larger-text);
 }
 
-.bl-p-unit > img {
+.cards__item > img {
     width: 10rem;
 }
 
-.bl-p-unit > h1 {
+.cards__item > h1 {
     font-size: var(--larger-text);
     margin-bottom: 3rem;
     margin-top: 1rem;
 }
 
-.bl-p-unit > p {
+.cards__item > p {
     font-size: var(--medium-text);
 }
 
@@ -195,7 +196,7 @@ span {
     width: 60%;
 }
 
-.browsing > .bl-p-unit {
+.browsing > .cards__item {
     text-align: left;
 }
 
@@ -209,7 +210,7 @@ span {
 }
 
 
-/* MEdia Q */
+/* Responsive Layouts */
 
 @media only screen and (max-width: 1500px) {
     :root {
@@ -245,11 +246,11 @@ span {
       display: none;
     }
 
-    #presentation>h1 {
+    #header__content>h1 {
       font-size: var(--larger-text);
   }
 
-  .bl-presentation  {
+  .cards  {
     flex-wrap: wrap;
     width: 100%;
     padding: 0;
@@ -258,19 +259,19 @@ span {
     justify-content: center;
   }
 
-  .bl-p-unit > h1 {
+  .cards__item > h1 {
     font-size: var(--large-text);
 }
-.bl-p-unit > p {
+.cards__item > p {
   font-size: var(--small-text);
   margin-bottom: 3rem;
   margin-top: 1rem;
 }
 
-.bl-p-unit  span,h1,p {
+.cards__item  span,h1,p {
 text-align: center;
 }
-.bl-p-unit span{
+.cards__item span{
 display: block;
 }
 
@@ -298,21 +299,26 @@ display: block;
     width: 25rem;
   }
 
-  #presentation > .Button {
+  #header__content > .Btn {
     padding: 1rem 2rem 1rem 2rem;
   }
   
 }
 
 @media only screen and (max-width: 350px) {
-    #presentation span:first-of-type {
+    #header__content span:first-of-type {
         margin-right: 0rem;
         padding: 1rem 1.5rem 1rem 1.5rem;
         margin-top: 0;
       }
-      #presentation .Button {
+      #header__content .Btn {
         margin-right: 0rem;
         padding: 1rem 1.5rem 1rem 1.5rem;
         margin-top: 2rem;
+      }
+
+      .browsing img {
+        width: 100%;
+        max-width: 25rem;
       }
 }
